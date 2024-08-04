@@ -20,3 +20,4 @@ Used reatjs framework, and most of the UI using MUI (Material design UI) from mu
 -   After pull the github repo, open terminal in the root folder where package.json exist, type "yarn" to install/download node_modules.
 -   The port used for this app is 8084, you can change it from package.json scripts part.
 -   Set up backend base url from ".env" file, in this case http://localhost:8083/, or depend on whatever port you are using in the backend.
+-   Run "yarn start" to run the app.
