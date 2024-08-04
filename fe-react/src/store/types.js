@@ -1,0 +1,11 @@
+const types = {}
+
+types.IS_USING_LAYOUT = 'IS_USING_LAYOUT'
+types.IS_DARK_MODE = 'IS_DARK_MODE'
+types.IS_OS_DARK_MODE = 'IS_OS_DARK_MODE'
+types.THEME = 'THEME'
+types.MESSAGE_BOX = 'MESSAGE_BOX'
+types.IS_SHOW_PROGRESS_BAR = 'IS_SHOW_PROGRESS_BAR'
+types.SHOW_WINDOW = 'SHOW_WINDOW'
+
+export default types

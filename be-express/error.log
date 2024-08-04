@@ -1,0 +1,119 @@
+[2024-08-04T19:13:47.228] [ERROR] log - Error: WHERE parameter "id" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1743:13)
+    at C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1732:35)
+    at PostgresQueryGenerator.getWhereConditions (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2075:19)
+    at PostgresQueryGenerator.selectQuery (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\dialects\abstract\query-generator.js:988:28)
+    at PostgresQueryInterface.select (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+    at Order.findAll (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Order.findOne (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\model.js:1240:12)
+[2024-08-04T19:29:14.700] [ERROR] log - Error
+    at Query.run (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.select (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Order.findAll (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\sequelize\lib\model.js:1140:21)
+    at async orderRepository.getOrders (C:\github.com\satriawanbasri\juna-restaurant\be-express\src\repositories\orderRepository.js:18:12)
+    at async orderService.getOrders (C:\github.com\satriawanbasri\juna-restaurant\be-express\src\services\orderService.js:83:24)
+    at async C:\github.com\satriawanbasri\juna-restaurant\be-express\src\controllers\orderController.js:34:30 {
+  name: 'SequelizeDatabaseError',
+  parent: error: column "totalQuantity" does not exist
+      at Parser.parseErrorMessage (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\pg-protocol\dist\parser.js:283:98)
+      at Parser.handlePacket (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\pg-protocol\dist\parser.js:122:29)
+      at Parser.parse (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\pg-protocol\dist\parser.js:35:38)
+      at Socket.<anonymous> (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:545:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:495:3)
+      at Readable.push (node:internal/streams/readable:375:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+      at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+    length: 113,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '81',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3718',
+    routine: 'errorMissingColumn',
+    sql: 'SELECT "id", "createdOn", "createdBy", "updatedOn", "updatedBy", "tableNumber", "totalQuantity", "totalPrice", "status" FROM "Order" AS "Order" ORDER BY "Order"."updatedOn" DESC;',
+    parameters: undefined
+  },
+  original: error: column "totalQuantity" does not exist
+      at Parser.parseErrorMessage (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\pg-protocol\dist\parser.js:283:98)
+      at Parser.handlePacket (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\pg-protocol\dist\parser.js:122:29)
+      at Parser.parse (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\pg-protocol\dist\parser.js:35:38)
+      at Socket.<anonymous> (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:545:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:495:3)
+      at Readable.push (node:internal/streams/readable:375:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+      at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+    length: 113,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '81',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3718',
+    routine: 'errorMissingColumn',
+    sql: 'SELECT "id", "createdOn", "createdBy", "updatedOn", "updatedBy", "tableNumber", "totalQuantity", "totalPrice", "status" FROM "Order" AS "Order" ORDER BY "Order"."updatedOn" DESC;',
+    parameters: undefined
+  },
+  sql: 'SELECT "id", "createdOn", "createdBy", "updatedOn", "updatedBy", "tableNumber", "totalQuantity", "totalPrice", "status" FROM "Order" AS "Order" ORDER BY "Order"."updatedOn" DESC;',
+  parameters: {}
+}
+[2024-08-04T20:08:24.995] [ERROR] log - TypeError: Cannot read properties of undefined (reading 'findAll')
+    at orderFoodRepository.getOrderFoodsByOrderId (C:\github.com\satriawanbasri\juna-restaurant\be-express\src\repositories\orderFoodRepository.js:30:37)
+    at orderFoodService.getOrderFoodsByOrderId (C:\github.com\satriawanbasri\juna-restaurant\be-express\src\services\orderFoodService.js:123:53)
+    at C:\github.com\satriawanbasri\juna-restaurant\be-express\src\controllers\orderController.js:59:47
+    at Layer.handle [as handle_request] (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\layer.js:95:5)
+    at C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:280:10)
+[2024-08-04T20:08:57.318] [ERROR] log - TypeError: Cannot read properties of undefined (reading 'findAll')
+    at orderFoodRepository.getOrderFoodsByOrderId (C:\github.com\satriawanbasri\juna-restaurant\be-express\src\repositories\orderFoodRepository.js:30:37)
+    at orderFoodService.getOrderFoodsByOrderId (C:\github.com\satriawanbasri\juna-restaurant\be-express\src\services\orderFoodService.js:123:53)
+    at C:\github.com\satriawanbasri\juna-restaurant\be-express\src\controllers\orderController.js:60:47
+    at Layer.handle [as handle_request] (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\layer.js:95:5)
+    at C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:280:10)
+[2024-08-04T20:09:10.677] [ERROR] log - TypeError: Cannot read properties of undefined (reading 'findAll')
+    at orderFoodRepository.getOrderFoodsByOrderId (C:\github.com\satriawanbasri\juna-restaurant\be-express\src\repositories\orderFoodRepository.js:30:37)
+    at orderFoodService.getOrderFoodsByOrderId (C:\github.com\satriawanbasri\juna-restaurant\be-express\src\services\orderFoodService.js:123:53)
+    at C:\github.com\satriawanbasri\juna-restaurant\be-express\src\controllers\orderController.js:60:47
+    at Layer.handle [as handle_request] (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\layer.js:95:5)
+    at C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\github.com\satriawanbasri\juna-restaurant\be-express\node_modules\express\lib\router\index.js:280:10)
